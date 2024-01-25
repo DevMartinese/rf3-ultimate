@@ -3,18 +3,26 @@ import * as THREE from 'three';
 
 function App() {
   return (
-    <Canvas camera={{ position: [3, 3, 3] }}>
-      <mesh position-x={-0.6}>
-        <boxGeometry />
-        <meshStandardMaterial color={'#ff0000'} side={THREE.FrontSide} />
-      </mesh>
-      <mesh position-x={0.6} position-z={-1}>
-        <boxGeometry />
-        <meshStandardMaterial color='hotpink' side={THREE.DoubleSide} />
-      </mesh>
+    <Canvas camera={{ position: [0, 3, 8] }}>
+      {/*Lighting*/}
       <ambientLight intensity={0.5} />
-      <directionalLight position={[0, 0, 3]} intensity={1} />
-      <directionalLight position={[0, 3, 3]} intensity={0.5} />
+      <directionalLight position={[0, 3, 5]} intensity={0.5} />
+
+      {/*Objects*/}
+      <group position={[-2, -2, 0]} scale={2} rotation-y={Math.PI / 4}>
+        <mesh position-x={-1}>
+          <boxGeometry />
+          <meshStandardMaterial color='red' />
+        </mesh>
+        <mesh>
+          <boxGeometry />
+          <meshStandardMaterial color='blue' />
+        </mesh>
+        <mesh position-x={1}>
+          <boxGeometry />
+          <meshStandardMaterial color='green' />
+        </mesh>
+      </group>
     </Canvas>
   )
 }
