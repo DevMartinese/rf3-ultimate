@@ -23,7 +23,7 @@ function App() {
           position={[5, 5, 5]}
           intensity={0.5}
           castShadow
-          shadow-mapSize={[64, 64]} //Map Shadow
+          //shadow-mapSize={[64, 64]} = Map Shadow
         />
         <directionalLight
           position={[-5, 5, 5]}
