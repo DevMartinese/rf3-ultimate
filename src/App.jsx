@@ -68,7 +68,7 @@ function App() {
   return (
     <>
       <ThemeProvider>
-      <UI />
+        <UI />
         <Canvas camera={{ position: [0, 2, 6], fov: 42 }}>
           <OrbitControls />
           <Cube rotation-y={Math.PI / 4} onClick={onCubeClicked} />
