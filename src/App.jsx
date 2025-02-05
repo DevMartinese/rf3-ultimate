@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber'
 
 function App() {
   return (
-    <Canvas camera={{ position: [3, 3, 3] }}>
+    <Canvas camera={{ position: [2, 2, 2] }}>
       <OrbitControls />
       <mesh>
         <boxGeometry />
